@@ -1,0 +1,42 @@
+
+@font-face {
+    font-family: GE_SS_MEDIUM;
+    src: url(../fonts/GE_SS_TWO_MEDIUM.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: GE_SS_BOLD;
+    src: url(../fonts/GE_SS_Two_Bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: GE_SS_LIGHT;
+    src: url(../fonts/GE_SS_Two_Light.otf);
+    font-weight: 300;
+}
+
+
+
+
+html[lang='ar']{
+
+    @import "bootstrap_rtl";
+
+
+    direction: rtl;
+    text-align: right;
+
+    body{
+        text-align: right;
+        font-family: "GE_SS_MEDIUM", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    .list-group{
+        padding-left: 0;
+        text-align: right;
+    }
+    .dropdown-menu{
+        right: 0;
+        left: auto;
+    }
+}
