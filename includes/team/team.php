@@ -25,8 +25,8 @@
                      data-name="عادل العامري"
                      data-position="المدير العام"
                      data-nationality="عراقي"
-                     data-phone="+92-313-5404155"
-                     data-whatsapp="+92-301-5349627"
+                     data-phone="923135404155"
+                     data-whatsapp="923015349627"
                      data-email="adil@adilelameeri.com"
                 >
                     <div class="overlay d-flex flex-column justify-content-end align-items-baseline px-3">
@@ -67,15 +67,15 @@
 								</p>
 								<p>
 									رقم الهاتف:
-									<span class="phone"></span>
+									<a target="_blank" class="phone ltr"></a>
 								</p>
 								<p>
 									الواتس اب:
-									<span class="whatsapp"></span>
+									<a target="_blank" class="whatsapp ltr"></a>
 								</p>
 								<p>
 									البريد الالكتروني:
-									<span class="email"></span>
+									<a target="_blank" class="email ltr"></a>
 								</p>
 							</div>
 						</div>

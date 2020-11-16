@@ -107,9 +107,14 @@
         $('#teamMemberModal .name')[0].innerText = name;
         $('#teamMemberModal .position')[0].innerText = position;
         $('#teamMemberModal .nationality')[0].innerText = nationality;
-        $('#teamMemberModal .phone')[0].innerText = phone;
-        $('#teamMemberModal .whatsapp')[0].innerText = whatsapp;
+        $('#teamMemberModal .phone')[0].innerText = `${phone}`;
+        $('#teamMemberModal .phone')[0].href = `tel:${phone}`;
+        $('#teamMemberModal .whatsapp')[0].innerText = `${whatsapp}`;
+        $('#teamMemberModal .whatsapp')[0].href = `https://api.whatsapp.com/send/?phone=:${whatsapp}`;
+
         $('#teamMemberModal .email')[0].innerText = email;
+        $('#teamMemberModal .email')[0].href = `mailto=:${email}`;
+
 
     })
 

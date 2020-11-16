@@ -23,7 +23,7 @@
 		            <a class="nav-link" href="../offers.php">العروض</a>
 	            </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">خدماتنا</a>
+                    <a class="nav-link" href="../services.php">خدماتنا</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../procedure.php">الإجراءات</a>
