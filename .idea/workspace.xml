@@ -2,121 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208f729a-e1f0-4015-b6bd-bea8ba48f76b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/about-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/about-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/about-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/about-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/about-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/blog-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/contact-us.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/error-404-ar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/error-404-en.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/hero-about.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/hero-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/offers-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/offers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/order-hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/passport.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/procedures.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/service-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/services.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/team1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/whatsapp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/why-us1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/why-us2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/worker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/about/about.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/about/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/about/warning.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/about/why-us.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/blog/blogs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/blog/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/blog/related.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/blog/single-details.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/call-to-action.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/contact/branches.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/contact/contact-form.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/contact/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/copyrights.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/footer-links.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/home/about.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/home/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/home/offers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/home/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/home/team.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/home/what-we-offer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/offers/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/offers/offers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/order/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/order/order-form.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/procedure/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/procedure/procedures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/services/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/services/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/social.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/team/hero.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/team/team.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/topbar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/procedure.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-page.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_alert.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_breadcrumb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_carousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_custom-forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_custom-forms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_input-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_input-group.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_list-group.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_pagination.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_progress.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_progress.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_reboot.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_root.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_spinners.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_spinners.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_toasts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_toasts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_type.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/bootstrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_grid-framework.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_image.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_screen-reader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/utilities/_borders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/utilities/_borders.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/scss/utilities/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/scss/utilities/_text.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +45,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611150514329</updated>
       <workItem from="1611150530080" duration="151000" />
-      <workItem from="1611150726337" duration="5696000" />
+      <workItem from="1611150726337" duration="9144000" />
+      <workItem from="1611175374314" duration="546000" />
     </task>
     <servers />
   </component>

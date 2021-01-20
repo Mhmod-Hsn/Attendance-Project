@@ -92,7 +92,8 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--primary);
+    //background: var(--primary);
+    background: #fff;
     z-index: 99999;
     transition: all 0.3s ease-in;
     visibility: visible;
@@ -198,8 +199,8 @@ nav.navbar  {
     }
 
     &.fixed-top {
-        box-shadow: 0 0px 20px #bbb;
-
+        box-shadow: 0 0 20px #bbb;
+        animation: slideDownNavbar 0.5s;
 
         .navbar-brand img {
             height: 40px;
@@ -212,482 +213,62 @@ nav.navbar  {
 
 }
 
+
+
+
+
+
 @media screen and (max-width: 991px) {
-    nav{
+    nav {
         box-shadow: 0 0px 20px #bbb;
 
-    }
-}
-
-
-#hero {
-    .slick-next,
-    .slick-prev {
-        z-index: 9;
-    }
-
-    .slick-prev {
-        left: 50px;
-    }
-
-    .slick-next {
-        right: 50px;
-    }
-
-    .single-slide {
-        height: 80vh;
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #0009;
-
-            .text {
-                width: min(90%, 800px);
-
-                .slide-title {
-                    font-size: max(2.1rem, 3vw);
-                }
-
-                .slide-description {
-                    font-size: max(1.3rem, 1.4vw);
-                }
-            }
-        }
-    }
-
-    .slick-prev,
-    .slick-next {
-        width: 50px;
-        height: 50px;
-        border: 3px solid #fff;
-        opacity: 0.7;
-
-        &:before {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-size: 35px;
+        .navbar-brand img {
+            height: 60px;
         }
 
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .slick-next:before {
-        content: '\f105';
-    }
-
-    .slick-prev:before {
-        content: '\f104';
-    }
-}
-
-
-#about .card {
-    display: block;
-    margin: -60px auto auto;
-    //width: 1100px;
-    //min-width: 60%;
-    //max-width: 95%;
-    padding-bottom: 100px;
-
-    img {
-        height: 70px;
-    }
-
-    .about-title {
-        font-size: max(1.3rem, 1.8vw);
-    }
-
-    .about-description {
-        font-size: max(0.9rem, 1.1vw);
-    }
-}
-
-
-#services {
-    .text {
-        .single-service {
-            list-style: none;
-            width: calc(99% / 3);
-            display: inline-block;
-            margin-bottom: 10px;
-
-            &:before {
-                content: '\f104';
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                color: white;
-                background: var(--secondary);
-                width: 20px;
-                height: 20px;
-                display: inline-block;
-                text-align: center;
-                line-height: 20px;
-                border-radius: 50%;
-                margin-left: 10px;
+        &.fixed-top {
+            .navbar-brand img {
+                height: 40px;
             }
         }
     }
 }
 
-#team,
-#offers,
-#team-slider {
-    .single-team-member,
-    .single-offer,
-    .single-slide {
-        border: 10px solid white;
-        height: 300px;
+#scroll-top{
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    align-items: center;
+    display: none;
 
-        .overlay {
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            height: 100%;
-            background: linear-gradient(0deg, rgb(2, 0, 36) 0%, rgba(255, 255, 255, 0) 50%);
-        }
-
-        &:hover .overlay {
-            opacity: 1;
-        }
-    }
-
-    .slick-dots {
-        bottom: -50px;
-
-        li {
-            button::before {
-                content: '';
-                width: 12px;
-                height: 12px;
-                border: 1px solid var(--primary);
-                border-radius: 50%;
-            }
-
-            &.slick-active {
-                button::before {
-                    background: var(--secondary);
-                    border: 1px solid var(--secondary);
-                }
-            }
-        }
+    &.show{
+        display: block;
+        animation: slideDown 0.5s;
     }
 }
-
-
-#what-we-offer {
-    position: relative;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
-
-    img {
-        height: 70px;
-    }
-}
-
-#offers {
-    .single-slide {
-        margin-bottom: 50px;
-        //border: none;
-
-        .overlay {
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        &:hover .overlay {
-            opacity: 1;
-        }
-    }
-}
-
-
-#footer-links {
-    a {
-        color: #fff;
-
-        &:hover {
-            color: var(--secondary)
-        }
-    }
-
-    .title {
-        position: relative;
-        margin-bottom: 25px;
-    }
-
-    ul {
-        padding: 0;
-
-        li {
-            margin: 10px auto;
-            width: 49%;
-
-        }
-    }
-}
-
-#social {
-    ul {
-        li {
-            width: auto;
-        }
-    }
-}
-
-
-/* About Page */
-@media screen and (max-width: 991px) {
-    #about-section {
-        box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.8);
-    }
-}
-
-
-#why-us {
-    position: relative;
-
-    .img {
-        min-height: 500px;
-    }
-
-    ul {
-        li {
-            margin-bottom: 15px;
-        }
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #why-us {
-
-        #center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: min(90%, 500px);
-        }
-    }
-}
-
-
-#offers-group{
-    .single-offer{
-        &:hover{
-            .overlay{
-                box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
-                background: transparent;
-
-            }
-        }
-    }
-}
-
-
-#call-to-action{
-    i{
-        font-size: 2.5rem
-    }
-}
-
-
-#team{
-    .single-team-member{
-        cursor: pointer;
-        .overlay {
-            opacity: 1;
-        }
-    }
-}
-
-
-#branches{
-    .single-branche{
-        i{
-            font-size: 2rem;
-        }
-    }
-}
-
-
-#procedure{
-    .card{
-        margin: 15px auto;
-        border-bottom: 1px solid rgba(0,0,0,0.2);
-        .card-header{
-            padding: 0;
-            button[data-toggle='collapse']{
-                padding: 15px 20px;
-                border-top: 3px solid var(--secondary);
-                color: var(--secondary);
-                position: relative;
-                &:after{
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 900;
-                    content: "\f068";
-                    position: absolute;
-                    left: 20px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                &.collapsed{
-                    color: var(--primary);
-                    border-top: 3px solid transparent;
-                    &:after{
-                        content: "\f067";
-
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-
-
-#services-page{
-    .single-service{
-        height: 300px;
-
-        .overlay {
-            transition: all 0.3s ease-in-out;
-            height: 100%;
-            background: linear-gradient(0deg, #000a 0%, rgba(255, 255, 255, 0) 50%);
-            justify-content: flex-end!important;
-            cursor: pointer;
-
-            .arrows{
-                display: none;
-                position: relative;
-                height: 50px;
-
-                &:after {
-                    content: '\f103';
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 900;
-                    color: white;
-                    font-size: 50px;
-                    top: -20px;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    animation: moveDown 700ms linear infinite;
-                }
-
-            }
-        }
-
-        &:hover .overlay {
-            background: linear-gradient(0deg, #000a 0%, #000a 50%);
-            justify-content: center!important;
-            .arrows{
-                display: block;
-            }
-        }
-
-    }
-
-
-
-    .single-sub-service{
-        font-size: 14px;
-        margin-bottom: 10px;
-        &:before {
-            content: '\f104';
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: white;
-            background: var(--secondary);
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-            text-align: center;
-            line-height: 20px;
-            border-radius: 50%;
-            margin-left: 10px;
-        }
-    }
-
-    //.collapse{
-    //
-    //    position: absolute;
-    //    bottom: -50%;
-    //    z-index: 2;
-    //    width: 90vw;
-    //    background: #fff;
-    //
-    //}
-}
-
-
-
-
-@keyframes moveDown {
+@keyframes slideDownNavbar {
     0%{
-        top: -40px;
+        top: -100px
     }
     100%{
-        top: -20px;
+        top: 0
+    }
+}
+@keyframes slideDown {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 
-
-
-ul.pagination{
-    li{
-       a{
-           padding: 10px 15px;
-       }
-    }
-    .active{
-        a{
-            background-color: var(--secondary) !important;
-            border-color: var(--secondary) !important;
-        }
-    }
-}
-
-
-#related-blogs{
-    .related-blogs-title{
-        position: relative;
-        &:after,
-        &:before{
-            content: " ــــــ ";
-            margin: 0 10px;
-        }
-    }
-
-    .media{
-        img{
-            width: 100px;
-        }
-
-        &:last-of-type{
-            border-bottom: none!important;
-        }
-
-        .media-body{
-            position: relative;
-
-            .counter{
-                position: absolute;
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                background-color: var(--secondary);
-                text-align: center;
-                line-height: 25px;
-                right: -30px;
-                top: -10px;
-                color: #fff;
-                border: 3px solid #fff;
-            }
-        }
+/* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }

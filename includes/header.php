@@ -19,18 +19,21 @@
 </head>
 <body>
 
-<div id="loader">
+<div id="loader" class="d-flex align-content-center justify-content-center">
+	<!--
 	<div class="loader">
 		<div class="inner one"></div>
 		<div class="inner two"></div>
 		<div class="inner three"></div>
 	</div>
+	-->
+	<img src="../images/logo.png" class="img-fluid m-auto" alt="">
 </div>
 
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-white  py-0">
 	<div class="container">
 
 		<a class="navbar-brand" href="/">
