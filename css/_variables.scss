@@ -3,14 +3,15 @@
 ***********************/
 
 $theme-colors: (
-    primary: #235a21,
-    secondary: #f6ad20,
+    primary: #ff5969,
+    secondary: #ffc93b,
     gray: #6a6a6a,
     m-gray: #B7B7B7,
     l-gray: #f9f9f9,
     d-gray: #333,
     offwhite: #f5f5f5,
-    transparency: rgba(0, 0, 0, 0)
+    transparency: rgba(0, 0, 0, 0),
+    bodyText: #010101
 );
 :root {
     --primary: map-get($theme-colors, primary);
@@ -21,7 +22,7 @@ $theme-colors: (
 }
 
 $body-bg: #fff;
-$body-color: map-get($theme-colors, gray);
+$body-color: map-get($theme-colors, bodyText);
 $font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $enable-gradients: true;
 $enable-responsive-font-sizes: true;
@@ -31,12 +32,12 @@ $link-hover-color:           rgba(map-get($theme-colors, secondary),1);
 //$link-hover-color:                        darken($link-color, 15%) !default;
 
 $link-hover-decoration:      none;
-a{outline: none;}
+//a{outline: none;}
 
 $input-btn-focus-color:       rgba(map-get($theme-colors, secondary), .25) !default;
 $input-btn-focus-width :0.1rem;
 
-$spacer: 1rem;
+/*$spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(
         (
@@ -53,7 +54,7 @@ $spacers: map-merge(
             10: ($spacer * 8)
         ),
         $spacers
-);
+);*/
 
 .bg-contain,
 .bg-cover{
@@ -75,17 +76,17 @@ select option,
 }
 
 // border radius
-$border-radius: 0px;
-$border-radius-lg: 0px;
-$border-radius-sm: 0px;
+$border-radius: 3px;
+$border-radius-lg: 5px;
+$border-radius-sm: 2px;
 
 
 // container
-$container-max-widths: (
+/*$container-max-widths: (
     md: 850px,
     l: 1100px,
     xl: 1300px,
-);
+);*/
 
 
 // Transition
@@ -139,13 +140,6 @@ html {
 @for $i from 0 through 10 {
     .br-#{$i * 5}{
         border-radius: $i * 5px!important;
-    }
-}
-// background-size * 25 steps
-
-@for $i from 1 through 20 {
-    .bg-#{$i * 5}{
-        background-size: Max( ($i * 5%) , 350px )!important ;
     }
 }
 
