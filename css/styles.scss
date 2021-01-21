@@ -9,10 +9,6 @@
 @import "_ltr";
 @import "_rtl";
 
-body{
-    min-height: 10000px;
-}
-
 .rtl {
     direction: rtl;
 }
@@ -37,7 +33,13 @@ body{
         background-position: 100% 0;
     }
 }
+/*.btn-secondary{
+    color: #fff;
 
+    &:hover{
+        color: #fff;
+    }
+}*/
 .custom-control-label::after {
     position: absolute;
     top: 0;
@@ -84,6 +86,8 @@ body{
 .logo-white {
     filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(-80deg) brightness(495%) contrast(300%);
 }
+
+
 
 
 #loader {
@@ -171,7 +175,6 @@ body{
 
 
 
-
 nav.navbar  {
     .navbar-brand img {
         height: 70px;
@@ -215,10 +218,45 @@ nav.navbar  {
 
 
 
+#features{
+    .single-feature{
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            box-shadow: 0 5px 10px #ddd;
+            transform: scale(1.02);
+        }
+    }
+}
 
 
 
+// large screens
+@media screen and (min-width: 992px) {
+
+    .min-width-btn{
+        min-width: 150px;
+    }
+
+
+
+    #why-us{
+        padding: 150px 0!important;
+    }
+
+}
+
+// small screens
 @media screen and (max-width: 991px) {
+
+    .min-width-btn{
+        min-width: 100px;
+    }
+
+
+
+
+
     nav {
         box-shadow: 0 0px 20px #bbb;
 

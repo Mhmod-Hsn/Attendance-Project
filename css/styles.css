@@ -166,6 +166,11 @@ ul.bullets li::before {
   background-color: #ffc93b;
 }
 
+::selection {
+  background: #ff5969;
+  color: #fff;
+}
+
 .center-justify {
   text-align-last: center;
 }
@@ -12521,10 +12526,6 @@ html[lang=ar] .custom-control {
   margin-right: auto;
 }
 
-body {
-  min-height: 10000px;
-}
-
 .rtl {
   direction: rtl;
 }
@@ -12549,6 +12550,13 @@ body {
   background-position: 100% 0;
 }
 
+/*.btn-secondary{
+    color: #fff;
+
+    &:hover{
+        color: #fff;
+    }
+}*/
 .custom-control-label::after {
   position: absolute;
   top: 0;
@@ -12695,7 +12703,28 @@ nav.navbar.animate {
   transition: all 0.5s ease-in-out;
 }
 
+#features .single-feature {
+  transition: all 0.3s ease-in-out;
+}
+#features .single-feature:hover {
+  box-shadow: 0 5px 10px #ddd;
+  transform: scale(1.02);
+}
+
+@media screen and (min-width: 992px) {
+  .min-width-btn {
+    min-width: 150px;
+  }
+
+  #why-us {
+    padding: 150px 0 !important;
+  }
+}
 @media screen and (max-width: 991px) {
+  .min-width-btn {
+    min-width: 100px;
+  }
+
   nav {
     box-shadow: 0 0px 20px #bbb;
   }
