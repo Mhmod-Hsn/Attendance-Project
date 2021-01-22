@@ -59,7 +59,7 @@
 
 
 
-<div id="why-us"class=" ">
+<div id="why-us" class=" ">
 	<div class="container">
 		<div class="offset-md-6 col-md-6 d-flex  justify-content-center  flex-column">
 			<h2 class="font-weight-bolder">
@@ -85,7 +85,7 @@
 
 
 
-<div id="clients" class="position-relative py-5 py-md-3 my-5">
+<div id="clients" class="position-relative py-5 py-md-3">
 	<div class="container">
 		<div class="row">
 			<?php for ($i=0;$i<4;$i++){ ?>
@@ -111,7 +111,43 @@
 			<?php } ?>
 		</div>
 
-		<h2 class="font-weight-bold text-center text-white my-4">عملائنا التي نفخر بهم</h2>
+
+		<div id="counter" class="px-5">
+			<h2 class="font-weight-bold text-center text-white my-5">عملائنا التي نفخر بهم</h2>
+
+			<div class="card shadow bg-white mx-md-4 text-center">
+				<div class="row">
+					<div class="col-md-3 col-sm-6 col-12">
+						<div class="single-counter p-4">
+							<img src="./images/client.png" class="img-fluid">
+							<p class="h2 mb-1 mt-3 font-weight-bolder">19</p>
+							<p class="text-gray">عميل حالي</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-12">
+						<div class="single-counter p-4">
+							<img src="./images/application.png" class="img-fluid">
+							<p class="h2 mb-1 mt-3 font-weight-bolder">35</p>
+							<p class="text-gray">تطبيق تم تسليمهم</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-12">
+						<div class="single-counter p-4">
+							<img src="./images/product.png" class="img-fluid">
+							<p class="h2 mb-1 mt-3 font-weight-bolder">1550</p>
+							<p class="text-gray">منتج يباع يومياً</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-12">
+						<div class="single-counter p-4">
+							<img src="./images/chat.png" class="img-fluid">
+							<p class="h2 mb-1 mt-3 font-weight-bolder">2638</p>
+							<p class="text-gray">تعليق يكتب يومياً</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 

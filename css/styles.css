@@ -12698,6 +12698,9 @@ nav.navbar.animate {
   white-space: nowrap;
 }
 
+#clients {
+  transform: translateY(-90px);
+}
 #clients .single-client .image-holder {
   position: relative;
   border-radius: 50%;
@@ -12706,7 +12709,7 @@ nav.navbar.animate {
   width: 90%;
 }
 #clients .single-client .image-holder img {
-  max-width: 90%;
+  max-width: 150px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -12733,12 +12736,15 @@ nav.navbar.animate {
 #clients:before {
   content: "";
   position: absolute;
-  top: 8vw;
+  top: 100px;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 120px;
   background-color: var(--primary);
   z-index: -1;
+}
+#clients #counter .single-counter img {
+  height: 70px;
 }
 
 @media screen and (min-width: 992px) {
@@ -12776,15 +12782,19 @@ nav.navbar.animate {
     height: 40px;
   }
 
+  #clients {
+    transform: translateY(0);
+    /*&:before{
+        top: 0;
+        bottom: 0;
+    }*/
+  }
   #clients .single-client .image-holder {
     padding-bottom: 70%;
     width: 70%;
   }
   #clients .single-client .image-holder img {
     max-width: 70%;
-  }
-  #clients:before {
-    top: 0;
   }
 }
 #scroll-top {

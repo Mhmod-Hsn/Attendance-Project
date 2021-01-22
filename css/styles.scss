@@ -254,7 +254,7 @@ nav.navbar  {
 
 
 #clients{
-
+    transform: translateY(-90px);
     .single-client{
         .image-holder{
             position: relative;
@@ -265,7 +265,7 @@ nav.navbar  {
 
 
             img{
-                max-width: 90%;
+                max-width: 150px;
                 position:absolute;
                 top:50%; left:50%;
                 transform: translate(-50%, -50%);
@@ -296,12 +296,21 @@ nav.navbar  {
     &:before{
         content: '';
         position: absolute;
-        top: 8vw;
+        top: 100px;
         right: 0;
         left: 0;
-        bottom: 0;
+        bottom: 120px;
         background-color: var(--primary);
         z-index: -1;
+    }
+
+
+    #counter{
+        .single-counter{
+            img{
+                height: 70px;
+            }
+        }
     }
 }
 
@@ -362,6 +371,7 @@ nav.navbar  {
 
 
     #clients{
+        transform: translateY(0);
         .single-client{
             .image-holder{
                 padding-bottom: 70%;
@@ -373,9 +383,10 @@ nav.navbar  {
             }
         }
 
-        &:before{
+        /*&:before{
             top: 0;
-        }
+            bottom: 0;
+        }*/
     }
 
 }
