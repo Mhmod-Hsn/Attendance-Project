@@ -35,11 +35,11 @@ $(document).ready(()=>{
     });
 
 
-
     // check if document is RTL or LTR
     const isRTL = document.querySelector('html')?.attributes?.lang?.value === 'ar';
 
 
+    // Testimonials slider
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -47,7 +47,6 @@ $(document).ready(()=>{
         fade: true,
         asNavFor: '.slider-nav'
     });
-
     $('.slider-nav').slick({
         slidesToShow: 5,
         centerPadding: '0',
@@ -57,10 +56,17 @@ $(document).ready(()=>{
         arrows: false,
         edgeFriction: 0,
         focusOnSelect: true,
-        autoplay: false,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 700,
+                settings: {
+                    centerPadding: '50px',
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 500,
                 settings: {
                     centerPadding: '0',
                     slidesToShow: 3,

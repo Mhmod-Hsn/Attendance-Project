@@ -202,7 +202,7 @@
 </div>
 
 
-<div id="testimonial"  class="py-lg-5 py-md-4 py-3 my-4">
+<div id="testimonial"  class="py-lg-5 py-md-4 py-3 my-5">
 	<div class="container">
 		<div class="header text-center" >
 			<h2 class="font-weight-bolder">ماذا يقول عملائنا عنا؟</h2>
@@ -213,7 +213,9 @@
 			<div class="slider-nav ltr">
                 <?php for ($i=0;$i<10;$i++) { ?>
 	                <div class="single-slide">
-		                <img src="./images/fishmarket.png" class="img-fluid rounded-circle d-block mx-auto" alt="">
+		                <div class="img-holder">
+			                <img src="./images/fishmarket.png" class="img-fluid rounded-circle d-block mx-auto" alt="">
+		                </div>
 	                </div>
                 <?php }?>
 			</div>
@@ -240,6 +242,7 @@
 		</div>
 	</div>
 </div>
+
 
 
 <?php include('includes/footer.php') ?>

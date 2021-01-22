@@ -391,8 +391,13 @@ nav.navbar  {
             transform: scale(1.5);
 
             img{
-                filter: drop-shadow(0 0 10px #888);
-                border: 3px solid var(--primary)
+                border: 2px solid var(--primary);
+                animation-name: pulse;
+                animation-duration: 1s;
+                animation-timing-function: ease-out;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-play-state: running;
             }
         }
     }
@@ -401,6 +406,16 @@ nav.navbar  {
         color: #f7941d;
     }
 }
+
+
+#call-to-action{
+    position: relative;
+    img{
+        height: 100px;
+        transform: translateX(4vw);
+    }
+}
+
 
 // large screens
 @media screen and (min-width: 992px) {
@@ -419,6 +434,14 @@ nav.navbar  {
         }
     }
 
+
+
+    #call-to-action{
+        img{
+
+            //transform: translateX(50px);
+        }
+    }
 }
 
 // small screens
@@ -471,12 +494,18 @@ nav.navbar  {
                 }
             }
         }
-
-        /*&:before{
-            top: 0;
-            bottom: 0;
-        }*/
     }
+
+
+
+    #call-to-action{
+        img{
+            height: 70px;
+            transform: translateX(10vw);
+        }
+    }
+
+
 
 }
 
@@ -486,11 +515,33 @@ nav.navbar  {
     right: 30px;
     align-items: center;
     display: none;
-
+    z-index: 1;
     &.show{
         display: block;
         animation: slideDown 0.5s;
     }
 }
+
+
+#footer{
+    background-color: #f0f2f6;
+
+
+    .social-icons{
+        a{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            background-color: #ff5969;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 17px;
+        }
+    }
+}
+
+
 
 @import "animation";
