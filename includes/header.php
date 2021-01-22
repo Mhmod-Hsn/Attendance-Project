@@ -44,7 +44,7 @@
 
 		<!-- SHOW ONLY IN LARGE SCREENS-->
 		<div class="d-block d-md-none">
-			<a href="#" class="ml-3  btn btn-outline-secondary rounded-pill text-d-gray px-5" >ابدأ الآن</a>
+			<a href="#" class="ml-3 font-weight-bold btn btn-outline-secondary rounded-pill text-d-gray px-5" >ابدأ الآن</a>
 			<a class="mx-3  text-primary font-weight-bold text-uppercase" href="#">en</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -74,7 +74,7 @@
 					<a class="nav-link" href="#">دخول</a>
 				</li>
 				<li class="nav-item ml-3 d-none d-md-inline-block">
-					<a href="#" class=" btn btn-outline-secondary rounded-pill text-d-gray px-5" >ابدأ الآن</a>
+					<a href="#" class="font-weight-bold btn btn-outline-secondary rounded-pill text-d-gray px-5" >ابدأ الآن</a>
 				</li>
 				<li class="nav-item ml-3 d-none d-md-inline-block">
 					<a class="nav-link text-primary font-weight-bold text-uppercase" href="#">en</a>

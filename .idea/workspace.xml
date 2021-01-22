@@ -3,10 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="208f729a-e1f0-4015-b6bd-bea8ba48f76b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_rtl.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_rtl.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/GE_SS_TWO_MEDIUM.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/GE_SS_Two_Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/GE_SS_Two_Light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/feat1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/feat2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/feat3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hero-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/navbar.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +57,7 @@
       <workItem from="1611150530080" duration="151000" />
       <workItem from="1611150726337" duration="9144000" />
       <workItem from="1611175374314" duration="659000" />
-      <workItem from="1611231659003" duration="8126000" />
+      <workItem from="1611231659003" duration="16703000" />
     </task>
     <servers />
   </component>
