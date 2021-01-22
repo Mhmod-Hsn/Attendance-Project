@@ -12640,6 +12640,15 @@ html[lang=ar] .custom-control {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
+.absCover, #clients:before, #clients .single-client .image-holder:before, #control-panel:before,
+#why-us:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 nav.navbar .navbar-brand img {
   height: 70px;
 }
@@ -12677,25 +12686,61 @@ nav.navbar.animate {
   transform: scale(1.02);
 }
 
+#control-panel,
 #why-us {
   position: relative;
 }
+#control-panel:before,
 #why-us:before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../images/why-us-rocket.png");
   background-repeat: no-repeat;
 }
 
-.circle {
-  display: inline-block;
-  min-width: 15%;
-  /* to allow placement of numbers on top of circles instead of below them */
-  white-space: nowrap;
+#why-us:before {
+  background-image: url("../images/why-us-rocket.png");
+}
+
+#control-panel:before {
+  background-image: url("../images/control-panel.png");
+  background-size: contain;
+}
+
+#control-panel .card {
+  margin: 15px auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#control-panel .card .card-header {
+  padding: 0;
+}
+#control-panel .card .card-header button[data-toggle=collapse] {
+  padding: 15px 20px;
+  position: relative;
+  color: #fff;
+  background-color: var(--primary);
+}
+#control-panel .card .card-header button[data-toggle=collapse] i {
+  color: #fff;
+}
+#control-panel .card .card-header button[data-toggle=collapse]:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+#control-panel .card .card-header button[data-toggle=collapse].collapsed {
+  color: var(--d-gray);
+  background-color: #fff;
+}
+#control-panel .card .card-header button[data-toggle=collapse].collapsed i {
+  color: var(--primary);
+}
+#control-panel .card .card-header button[data-toggle=collapse].collapsed:after {
+  content: "";
+  color: var(--primary);
 }
 
 #clients {
@@ -12707,6 +12752,19 @@ nav.navbar.animate {
   height: 0;
   padding-bottom: 90%;
   width: 90%;
+}
+#clients .single-client .image-holder:before {
+  content: "";
+  border: 3px inset transparent;
+  border-radius: 50%;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 0.3s ease-in-out;
+}
+#clients .single-client .image-holder:hover:before {
+  border-color: var(--secondary);
 }
 #clients .single-client .image-holder img {
   max-width: 150px;
@@ -12735,10 +12793,7 @@ nav.navbar.animate {
 }
 #clients:before {
   content: "";
-  position: absolute;
   top: 100px;
-  right: 0;
-  left: 0;
   bottom: 120px;
   background-color: var(--primary);
   z-index: -1;
@@ -12752,11 +12807,13 @@ nav.navbar.animate {
     min-width: 150px;
   }
 
-  #why-us {
+  #control-panel,
+#why-us {
     padding: 150px 0;
   }
-  #why-us:before {
-    background-position: 120% center;
+  #control-panel:before,
+#why-us:before {
+    background-position: 55vw center;
   }
 }
 @media screen and (max-width: 991px) {
@@ -12764,10 +12821,13 @@ nav.navbar.animate {
     min-width: 100px;
   }
 
-  #why-us {
+  #control-panel,
+#why-us {
     padding: 50px 0;
   }
-  #why-us:before {
+  #control-panel:before,
+#why-us:before {
+    background-size: 75%;
     background-position: 60% center;
     opacity: 0.4;
   }
@@ -12825,6 +12885,14 @@ nav.navbar.animate {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
   }
 }
 /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */

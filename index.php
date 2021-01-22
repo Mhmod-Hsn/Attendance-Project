@@ -61,7 +61,7 @@
 
 <div id="why-us" class=" ">
 	<div class="container">
-		<div class="offset-md-6 col-md-6 d-flex  justify-content-center  flex-column">
+		<div class="offset-lg-6 col-lg-6 d-flex  justify-content-center  flex-column">
 			<h2 class="font-weight-bolder">
 				انطلق الآن وانشر منتجاتك للعالم
 			</h2>
@@ -85,7 +85,7 @@
 
 
 
-<div id="clients" class="position-relative py-5 py-md-3">
+<div id="clients" class="position-relative  py-md-3 py-5">
 	<div class="container">
 		<div class="row">
 			<?php for ($i=0;$i<4;$i++){ ?>
@@ -120,28 +120,28 @@
 					<div class="col-md-3 col-sm-6 col-12">
 						<div class="single-counter p-4">
 							<img src="./images/client.png" class="img-fluid">
-							<p class="h2 mb-1 mt-3 font-weight-bolder">19</p>
+							<p class="h2 mb-1 mt-3 font-weight-bolder counter-number" data-count="19">0</p>
 							<p class="text-gray">عميل حالي</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-12">
 						<div class="single-counter p-4">
 							<img src="./images/application.png" class="img-fluid">
-							<p class="h2 mb-1 mt-3 font-weight-bolder">35</p>
+							<p class="h2 mb-1 mt-3 font-weight-bolder counter-number" data-count="35">0</p>
 							<p class="text-gray">تطبيق تم تسليمهم</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-12">
 						<div class="single-counter p-4">
 							<img src="./images/product.png" class="img-fluid">
-							<p class="h2 mb-1 mt-3 font-weight-bolder">1550</p>
+							<p class="h2 mb-1 mt-3 font-weight-bolder counter-number" data-count="1550">0</p>
 							<p class="text-gray">منتج يباع يومياً</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-12">
 						<div class="single-counter p-4">
 							<img src="./images/chat.png" class="img-fluid">
-							<p class="h2 mb-1 mt-3 font-weight-bolder">2638</p>
+							<p class="h2 mb-1 mt-3 font-weight-bolder counter-number" data-count="2663">0</p>
 							<p class="text-gray">تعليق يكتب يومياً</p>
 						</div>
 					</div>
@@ -150,6 +150,59 @@
 		</div>
 	</div>
 </div>
+
+
+
+
+<div id="control-panel" class="py-lg-5 py-md-4 py-sm-3 py-2">
+	<div class="container">
+		<div class="offset-lg-6 col-lg-6 d-flex  justify-content-center  flex-column">
+			<h2 class="font-weight-bolder">
+				إدارة متجرك بالكامل بسهولة
+			</h2>
+			<p class="font-weight-bold">
+				مع لوحة تحكم مميزة يتم تخصيصها لمتجرك
+			</p>
+
+			<div class="accordion" id="accordion">
+                <?php for ($i=0;$i<5;$i++){ ?>
+
+					<div class="card shadow">
+						<div class="card-header  " id="procedure-<?php echo $i?>">
+							<h2 class="mb-0">
+								<button class="btn br-0 border-0 shadow-none btn-block text-left font-weight-bolder  <?php if ($i!=0) echo 'collapsed';?>" type="button" data-toggle="collapse" data-target="#collapse-<?php echo $i?>" aria-expanded="<?php if ($i===0) echo 'true'; else echo 'false'?>" aria-controls="collapse-<?php echo $i?>">
+									<i class="fas fa-archive mr-3"></i>
+									إضافة المنتجات
+								</button>
+							</h2>
+						</div>
+
+						<div id="collapse-<?php echo $i?>" class="<?php if ($i===0) echo 'collapse show'; else echo 'collapse'?>" aria-labelledby="procedure-<?php echo $i?>"  data-parent="#accordion">
+							<div class="card-body bg-primary text-white br-0">
+								تستطيع إضافة منتجاتك بسهولة داخل متجرك و اضافة الصور
+								و الوصف و العنوان و الخيارات الخاصة بالمنتج و عرضه بشكل
+								واضح و بسيط بالإضافة إلى إمكانية التعديل على المنتج في أي
+								.وقت وتحديث بياناته بسهولة تامة
+							</div>
+						</div>
+					</div>
+
+
+                <?php } ?>
+			</div>
+
+
+
+			<div class="text-right">
+				<a href="#" class="btn-link font-weight-bold"> المزيد من مميزات لوحة التحكم</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
 
 
 <?php include('includes/footer.php') ?>

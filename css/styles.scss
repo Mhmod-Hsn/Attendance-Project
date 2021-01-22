@@ -170,6 +170,16 @@
 
 
 
+.absCover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
 nav.navbar  {
     .navbar-brand img {
         height: 70px;
@@ -228,29 +238,65 @@ nav.navbar  {
     }
 }
 
-
+#control-panel,
 #why-us{
     position: relative;
-    &:before{
+    &:before {
         content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url("../images/why-us-rocket.png");
+        @extend .absCover;
         background-repeat: no-repeat;
+
     }
 }
-
-.circle {
-    display: inline-block;
-    min-width: 15%;
-    /* to allow placement of numbers on top of circles instead of below them */
-    white-space: nowrap;
+#why-us:before{
+    background-image: url("../images/why-us-rocket.png");
+}
+#control-panel:before{
+    background-image: url("../images/control-panel.png");
+    background-size: contain;
 }
 
+#control-panel{
+    .card{
+        margin: 15px auto;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        .card-header{
+            padding: 0;
+            button[data-toggle='collapse']{
+                padding: 15px 20px;
+                position: relative;
+                color: #fff;
+                background-color: var(--primary);
+                i{
+                    color: #fff;
+                }
 
+                &:after{
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f068";
+                    position: absolute;
+                    left: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #fff;
+                }
+                &.collapsed{
+                    color: var(--d-gray);
+                    background-color: #fff;
+                    i{
+                        color: var(--primary);
+                    }
+                    &:after{
+                        content: "\f067";
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+
+    }
+}
 
 
 #clients{
@@ -263,6 +309,22 @@ nav.navbar  {
             padding-bottom: 90%;
             width: 90%;
 
+            &:before{
+                @extend .absCover;
+                content: '';
+                border: 3px inset transparent;
+                border-radius: 50%;
+                animation-name: rotate;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+
+
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover:before{
+                border-color: var(--secondary);
+            }
 
             img{
                 max-width: 150px;
@@ -294,11 +356,9 @@ nav.navbar  {
     }
 
     &:before{
+        @extend .absCover;
         content: '';
-        position: absolute;
         top: 100px;
-        right: 0;
-        left: 0;
         bottom: 120px;
         background-color: var(--primary);
         z-index: -1;
@@ -323,12 +383,12 @@ nav.navbar  {
     }
 
 
-
+    #control-panel,
     #why-us{
         padding: 150px 0;
 
         &:before{
-            background-position: 120% center;
+            background-position: 55vw center;
         }
     }
 
@@ -341,10 +401,12 @@ nav.navbar  {
         min-width: 100px;
     }
 
+    #control-panel,
     #why-us{
         padding: 50px 0;
 
         &:before{
+            background-size: 75%;
             background-position: 60% center;
             opacity: 0.4;
         }
@@ -403,29 +465,5 @@ nav.navbar  {
         animation: slideDown 0.5s;
     }
 }
-@keyframes slideDownNavbar {
-    0%{
-        top: -100px
-    }
-    100%{
-        top: 0
-    }
-}
-@keyframes slideDown {
-    0%{
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-
-/* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
-@media screen and (prefers-reduced-motion: no-preference) {
-    html {
-        scroll-behavior: smooth;
-    }
-}
+@import "animation";

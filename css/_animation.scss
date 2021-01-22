@@ -1,0 +1,35 @@
+
+@keyframes slideDownNavbar {
+    0%{
+        top: -100px
+    }
+    100%{
+        top: 0
+    }
+}
+@keyframes slideDown {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+/* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
