@@ -154,7 +154,7 @@
 
 
 
-<div id="control-panel" class="py-lg-5 py-md-4 py-sm-3 py-2">
+<div id="control-panel" class="py-lg-5 py-md-4 py-3">
 	<div class="container">
 		<div class="offset-lg-6 col-lg-6 d-flex  justify-content-center  flex-column">
 			<h2 class="font-weight-bolder">
@@ -202,7 +202,44 @@
 </div>
 
 
+<div id="testimonial"  class="py-lg-5 py-md-4 py-3 my-4">
+	<div class="container">
+		<div class="header text-center" >
+			<h2 class="font-weight-bolder">ماذا يقول عملائنا عنا؟</h2>
+			<p class=" font-weight-bold text-gray">يتم نشر جميع الآراء التي تصل لنا بكل شفافية بدون تعديل</p>
+		</div>
 
+		<div class="slider ">
+			<div class="slider-nav ltr">
+                <?php for ($i=0;$i<10;$i++) { ?>
+	                <div class="single-slide">
+		                <img src="./images/fishmarket.png" class="img-fluid rounded-circle d-block mx-auto" alt="">
+	                </div>
+                <?php }?>
+			</div>
+			<div class="slider-for ltr mt-4">
+                <?php for ($i=0;$i<10;$i++) { ?>
+					<div class="single-slide-testimonial text-center">
+						<div class="rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star-half"></i>
+						</div>
+						<p class="w-75 mx-auto">بالنسبة لي كانت منصة حلول هي الحل الأفضل لإنشاء متجر إلكتروني متكامل خاص بي بتكلفة بسيطة وبالكتير من المميزات التي لما أجدها في أي مكان آخر
+							ويجب أن أشكرهم على وجودهم بإستمرار للدعم الفني المتواصل لحل أي مشاكل تواجهني أو للرد على أي استفسار</p>
+
+						<hr class="w-25 d-block text-center my-md-4 my-3">
+
+						<p class="font-weight-bolder m-0">إسلام عادل <?php echo $i?></p>
+						<p class="font-weight-bold text-gray m-0">تطبيق سوق السمك</p>
+					</div>
+                <?php }?>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <?php include('includes/footer.php') ?>

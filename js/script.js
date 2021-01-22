@@ -4,14 +4,16 @@ $(document).ready(()=>{
     // hide Loader
     document.querySelector('#loader').classList.add('hidden');
 
+    // isInViewport function
+    $.fn.isInViewport = function () {
+        let elementTop = $(this).offset().top;
+        let elementBottom = elementTop + $(this).outerHeight();
 
+        let viewportTop = $(window).scrollTop();
+        let viewportBottom = viewportTop + $(window).height();
 
-
-
-    // check if document is RTL or LTR
-    const isRTL = document.querySelector('html')?.attributes?.lang?.value === 'ar';
-
-
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
 
     // Sweet Alert preparation
     window.swal = swal.mixin({
@@ -34,21 +36,47 @@ $(document).ready(()=>{
 
 
 
+    // check if document is RTL or LTR
+    const isRTL = document.querySelector('html')?.attributes?.lang?.value === 'ar';
+
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+        slidesToShow: 5,
+        centerPadding: '0',
+        centerMode: true,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        arrows: false,
+        edgeFriction: 0,
+        focusOnSelect: true,
+        autoplay: false,
+        responsive: [
+            {
+                breakpoint: 700,
+                settings: {
+                    centerPadding: '0',
+                    slidesToShow: 3,
+                }
+            }
+        ]
+
+    });
 
 
 
-    $.fn.isInViewport = function () {
-        let elementTop = $(this).offset().top;
-        let elementBottom = elementTop + $(this).outerHeight();
-
-        let viewportTop = $(window).scrollTop();
-        let viewportBottom = viewportTop + $(window).height();
-
-        return elementBottom > viewportTop && elementTop < viewportBottom;
-    };
 
 
 
+
+    // Counter
     $(window).on('scroll',function() {
         $('.counter-number').each(function() {
             if ($(this).isInViewport()) {

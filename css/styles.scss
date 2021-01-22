@@ -2,6 +2,7 @@
       Imports
 ***********************/
 
+.slick-list{overflow-x: hidden}
 
 @import "variables";
 // Bootstrap and its default variables
@@ -374,6 +375,32 @@ nav.navbar  {
     }
 }
 
+
+
+#testimonial{
+    background-image: url("../images/testimonial.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+    .single-slide{
+        padding: 50px 3vw;
+        transition: all 0.3s ease-in-out;
+        &.slick-current{
+            transform: scale(1.5);
+
+            img{
+                filter: drop-shadow(0 0 10px #888);
+                border: 3px solid var(--primary)
+            }
+        }
+    }
+
+    .rating{
+        color: #f7941d;
+    }
+}
 
 // large screens
 @media screen and (min-width: 992px) {
