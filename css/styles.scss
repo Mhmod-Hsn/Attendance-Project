@@ -54,6 +54,11 @@
 }
 */
 
+.fa{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
     border-color: var(--secondary);
 }
@@ -483,10 +488,9 @@ nav.navbar  {
         margin-bottom: 150px;
         font-size: small;
         &:before{
+            @extend .fa;
             position: absolute;
             content: '\f005';
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
             font-size: 20px;
             color: #fff;
             background-color: var(--primary);
@@ -504,9 +508,8 @@ nav.navbar  {
         li{
 
             &:before{
+                @extend .fa;
                 display: inline-block;
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
                 font-size: 20px;
                 margin: 0 3px 0 0;
             }
@@ -574,6 +577,74 @@ nav.navbar  {
 
 
 
+
+
+
+
+/* Blog Page start */
+#blog-header{
+    img{
+        max-height: 160px;
+    }
+}
+
+
+#blog-search{
+    position: relative;
+    i{
+        content: '\f002';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: auto;
+        z-index: 6;
+    }
+}
+
+
+#pagination{
+    ul{
+        li.page-item{
+            .page-link{
+                border-radius: 0;
+                border-color: transparent;
+                background-color: var(--l-gray);
+                color: var(--d-gray);
+            }
+
+            &.active{
+                .page-link {
+                    color: var(--primary);
+                }
+            }
+            &.page-item:last-child .page-link {
+                padding-left: 20px;
+                padding-right: 20px;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+            }
+            &.page-item:first-child .page-link {
+                padding-left: 20px;
+                padding-right: 20px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+            }
+            &.disabled{
+                .page-link {
+                    color: var(--gray);
+                }
+            }
+        }
+    }
+}
+
+/* Blog Page end */
+
+
+
+
+
+
 // large screens
 @media screen and (min-width: 992px) {
 
@@ -610,6 +681,15 @@ nav.navbar  {
 
         }
     }
+
+
+    #blog-header{
+        margin-top: 100px;
+        img{
+            transform: scale(1.5) translateY(-8px);
+        }
+    }
+
 }
 
 // small screens
@@ -631,7 +711,7 @@ nav.navbar  {
     }
 
 
-    nav {
+    nav.navbar {
         box-shadow: 0 0px 20px #bbb;
 
         .navbar-brand img {

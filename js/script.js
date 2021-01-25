@@ -195,12 +195,12 @@ $(document).ready(()=>{
 ///////////////// fixed menu on scroll
 $(window).scroll(function(){
     if ($(this).scrollTop() > 250) {
-        $('nav').addClass("fixed-top animate");
+        $('nav.navbar').addClass("fixed-top animate");
 
         $('#scroll-top').addClass('show')
 
     }else{
-        $('nav').removeClass("fixed-top animate");
+        $('nav.navbar').removeClass("fixed-top animate");
 
         $('#scroll-top').removeClass('show')
     }

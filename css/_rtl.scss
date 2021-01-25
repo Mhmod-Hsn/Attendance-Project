@@ -45,6 +45,9 @@ html[lang='ar']{
         margin-right: auto;
     }
 
+    .breadcrumb-item + .breadcrumb-item::before{
+        float: right;
+    }
 
 
 
@@ -71,6 +74,34 @@ html[lang='ar']{
     }
 
 
+
+    #blog-search{
+        i{
+            left: 10px;
+            right: auto;
+        }
+    }
+
+
+
+    #pagination{
+        ul{
+            li.page-item{
+                &.page-item:last-child .page-link {
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-top-left-radius: 100px;
+                    border-bottom-left-radius: 100px;
+                }
+                &.page-item:first-child .page-link {
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 100px;
+                    border-bottom-right-radius: 100px;
+                }
+            }
+        }
+    }
 
 
 }

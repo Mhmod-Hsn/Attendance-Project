@@ -59,13 +59,13 @@
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="navbar-nav ml-auto px-0">
 						<li class="nav-item ml-3 active">
-							<a class="nav-link" href="../index.php">الرئيسية<span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="/">الرئيسية<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item ml-3 ">
 							<a class="nav-link" href="packages.php">الباقات</a>
 						</li>
 						<li class="nav-item ml-3 ">
-							<a class="nav-link" href="#">المدونة</a>
+							<a class="nav-link" href="blog.php">المدونة</a>
 						</li>
 						<li class="nav-item ml-3 ">
 							<a class="nav-link" href="#">تجربة المنصة</a>
