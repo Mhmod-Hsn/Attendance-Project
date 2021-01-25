@@ -11113,6 +11113,7 @@ html[lang=en] #services .text .single-service:before {
 html[lang=ar] {
   direction: rtl;
   text-align: right;
+  /* Packages page */
 }
 html[lang=ar] .nav {
   padding-right: 0;
@@ -12388,6 +12389,15 @@ html[lang=ar] .custom-control {
   margin-left: 3rem;
   margin-right: auto;
 }
+html[lang=ar] #packages ul.features li:before {
+  margin: 0 0 0 3px;
+}
+html[lang=ar] #packages .special:before {
+  top: -6px;
+  left: -44px;
+  right: auto;
+  transform: rotate(-45deg);
+}
 
 .rtl {
   direction: rtl;
@@ -12413,22 +12423,25 @@ html[lang=ar] .custom-control {
   background-position: 100% 0;
 }
 
+/*
+
+
 .custom-control-label::after {
-  position: absolute;
-  top: 0;
-  left: -1.5rem;
-  display: block;
-  width: 1.8rem;
-  height: 1.8rem;
-  content: "";
-  background: no-repeat 120%/80% 55%;
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    content: "";
+    background: no-repeat 120%/80% 55%;
 }
 
 .custom-control-label::before {
-  width: 1.3rem;
-  height: 1.3rem;
+    width: 1.3rem;
+    height: 1.3rem;
 }
-
+*/
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
   border-color: var(--secondary);
 }
@@ -12473,6 +12486,14 @@ html[lang=ar] .custom-control {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s linear, opacity 0.5s linear;
+}
+#loader img {
+  animation-name: loaderPulse;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
 #loader .loader {
   position: absolute;
@@ -12533,7 +12554,7 @@ html[lang=ar] .custom-control {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
-.absCover, #clients:before, #clients .single-client .image-holder:before, #control-panel:before,
+.absCover, #shipment .shippers .single-shipper:before, #clients:before, #clients .single-client .image-holder:before, #control-panel:before,
 #why-us:before {
   position: absolute;
   top: 0;
@@ -12729,6 +12750,96 @@ nav.navbar.animate {
   transform: translateX(4vw);
 }
 
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  align-items: center;
+  display: none;
+  z-index: 1;
+}
+#scroll-top.show {
+  display: block;
+  animation: slideDown 0.5s;
+}
+
+#footer {
+  background-color: #f0f2f6;
+}
+#footer .social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  background-color: #ff5969;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+}
+
+/* Packages page */
+#packages .price {
+  font-size: 5rem;
+}
+#packages .special {
+  margin-bottom: 150px;
+  font-size: small;
+}
+#packages .special:before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  background-color: var(--primary);
+  width: 120px;
+  height: 45px;
+  text-align: center;
+  left: auto;
+  top: -6px;
+  right: -44px;
+  transform: rotate(45deg);
+  padding: 7px;
+}
+#packages ul.features li:before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  margin: 0 3px 0 0;
+}
+#packages ul.features li.active:before {
+  content: "";
+  color: var(--success);
+}
+#packages ul.features li.inactive:before {
+  content: "";
+  color: var(--danger);
+}
+
+#shipment .shippers .single-shipper {
+  position: relative;
+}
+#shipment .shippers .single-shipper img {
+  max-height: 80px;
+  width: auto;
+}
+#shipment .shippers .single-shipper:before {
+  content: "";
+  transition: all 0.3s ease-in-out;
+}
+#payment .payment-methods .single-payment-method img {
+  max-height: 70px;
+  width: auto;
+  transition: filter 0.3s ease-in-out;
+  filter: grayscale(0.9);
+}
+#payment .payment-methods .single-payment-method img:hover {
+  filter: grayscale(0);
+}
+
 @media screen and (min-width: 992px) {
   .min-width-btn {
     min-width: 150px;
@@ -12741,6 +12852,11 @@ nav.navbar.animate {
   #control-panel:before,
 #why-us:before {
     background-position: 55vw center;
+  }
+
+  #packages .special {
+    transform: scale(1.25) translateY(50px);
+    z-index: 1;
   }
 }
 @media screen and (max-width: 991px) {
@@ -12785,34 +12901,6 @@ nav.navbar.animate {
     transform: translateX(10vw);
   }
 }
-#scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  align-items: center;
-  display: none;
-  z-index: 1;
-}
-#scroll-top.show {
-  display: block;
-  animation: slideDown 0.5s;
-}
-
-#footer {
-  background-color: #f0f2f6;
-}
-#footer .social-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  line-height: 35px;
-  background-color: #ff5969;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 17px;
-}
-
 @keyframes slideDownNavbar {
   0% {
     top: -100px;
@@ -12851,6 +12939,37 @@ nav.navbar.animate {
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(255, 89, 105, 0);
+  }
+}
+@keyframes loaderPulse {
+  0% {
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 0 rgba(255, 89, 105, 0.7));
+  }
+  70% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 89, 105, 0));
+  }
+  100% {
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 0 rgba(255, 89, 105, 0));
+  }
+}
+.dashed-animation, #shipment .shippers .single-shipper:hover:before {
+  background-image: linear-gradient(90deg, var(--primary) 50%, transparent 50%), linear-gradient(90deg, var(--primary) 50%, transparent 50%), linear-gradient(0deg, var(--primary) 50%, transparent 50%), linear-gradient(0deg, var(--primary) 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+  background-position: left top, right bottom, left bottom, right top;
+  animation: border-dance 1s infinite linear;
+  z-index: -1;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: left top, right bottom, left bottom, right top;
+  }
+  100% {
+    background-position: left 15px top, right 15px bottom, left bottom 15px, right top 15px;
   }
 }
 /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */

@@ -212,16 +212,16 @@
 		<div class="slider ">
 			<div class="slider-nav ltr">
                 <?php for ($i=0;$i<10;$i++) { ?>
-	                <div class="single-slide">
-		                <div class="img-holder">
-			                <img src="./images/fishmarket.png" class="img-fluid rounded-circle d-block mx-auto" alt="">
+	                <div class="single-slide ">
+		                <div class="img-holder ">
+			                <img src="./images/fishmarket.png" class="cursor-pointer img-fluid rounded-circle d-block mx-auto" alt="">
 		                </div>
 	                </div>
                 <?php }?>
 			</div>
 			<div class="slider-for ltr mt-4">
                 <?php for ($i=0;$i<10;$i++) { ?>
-					<div class="single-slide-testimonial text-center">
+					<div class="single-slide-testimonial text-center ">
 						<div class="rating">
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>

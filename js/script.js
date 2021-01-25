@@ -4,6 +4,12 @@ $(document).ready(()=>{
     // hide Loader
     document.querySelector('#loader').classList.add('hidden');
 
+
+    //get current year
+    let d = new Date();
+    $('#current-year')[0].innerText = d.getFullYear()
+
+
     // isInViewport function
     $.fn.isInViewport = function () {
         let elementTop = $(this).offset().top;
@@ -110,6 +116,25 @@ $(document).ready(()=>{
             }
         });
     });
+
+
+
+    // add .d-none class to selected option
+    let selectedValue = $("input[name='payment']:checked").val()
+    // add d-none class for both
+    $('.monthly,.yearly').toggleClass('d-none')
+    // remove d-none class from selected option
+    $('.'+selectedValue).removeClass('d-none')
+
+
+    // Packages type change
+    $('#packages-payment input[type="radio"]').on('change',function(){
+        $('.monthly,.yearly').toggleClass('d-none')
+    })
+
+
+
+
 });
 
 
