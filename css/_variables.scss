@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 
 /**********************
@@ -6,8 +6,13 @@
 ***********************/
 
 $theme-colors: (
-    primary: #ff5969,
-    secondary: #ffc93b,
+    primary : #186478,
+    secondary: #323232,
+    success : #1ec78f,
+    danger  : #ea6958,
+    warning : #FF9F43,
+    dark    : #0b151f,
+
     gray: #6a6a6a,
     m-gray: #B7B7B7,
     l-gray: #f9f9f9,
@@ -24,22 +29,20 @@ $theme-colors: (
     --offwhite: map-get($theme-colors, offwhite);
 }
 
-$body-bg: #fff;
+$body-bg: #eee;
 $body-color: map-get($theme-colors, bodyText);
-$font-family-sans-serif: 'Almarai', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: 'Open Sans', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-weight-bolder:          900;
-$font-weight-base:            700;
 
 
-$enable-gradients: false;
 $enable-responsive-font-sizes: true;
+
 // links colors
 $link-color:                 rgba(map-get($theme-colors, primary),1);
-$link-hover-color:           rgba(map-get($theme-colors, secondary),1);
-//$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        darken($link-color, 15%) !default;
 
 $link-hover-decoration:      none;
-//a{outline: none;}
+a{outline: none;}
 
 $input-btn-focus-color:       rgba(map-get($theme-colors, secondary), .25) !default;
 $input-btn-focus-width :0.1rem;
@@ -71,14 +74,6 @@ $border-radius-lg: 5px;
 $border-radius-sm: 2px;
 
 
-// container
-/*$container-max-widths: (
-    md: 850px,
-    l: 1100px,
-    xl: 1300px,
-);*/
-
-
 // Transition
 $transition-normal: 0.3s;
 $transition-fast: 0.1s;
@@ -89,68 +84,8 @@ $enable-responsive-font-sizes: true;
 
 html {
     font-size: calc(10px + 0.4vw);
-
 }
 
-
-.responsive-header{
-    font-size: calc(16px + 1.4vw);
-}
-.responsive-paragraph{
-    font-size: calc(12px + 0.5vw);
-}
-
-
-/*
-!* Small devices (landscape phones, 544px and up) *!
-@media (min-width: 544px) {
-    html{font-size: 0.7rem;}
-}
-
-!* Medium devices (tablets, 768px and up) *!
-@media (min-width: 768px) {
-    html{font-size: 0.8rem;}
-}
-
-!* Large devices (desktops, 992px and up) *!
-@media (min-width: 992px) {
-    html{font-size: 0.9rem;}
-}
-
-!* Extra large devices (large desktops, 1200px and up) *!
-@media (min-width: 1200px) {
-    html{font-size: 1rem  ;}
-}
-
-
-*/
-
-
-// border radius * 5 steps
-@for $i from 0 through 10 {
-    .br-#{$i * 5}{
-        border-radius: $i * 5px!important;
-    }
-}
-
-ul.bullets {
-    li{
-        position: relative;
-        padding: 0 15px;
-        &::before {
-            content: "";
-            color: var(--secondary);
-            position: absolute;
-            left: 0;
-            right: auto;
-            top: 7px;
-            background-color: var(--secondary);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-    }
-}
 
 // scrollbar
 ::-webkit-scrollbar-track

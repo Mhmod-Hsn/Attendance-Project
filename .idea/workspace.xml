@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="208f729a-e1f0-4015-b6bd-bea8ba48f76b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
+    <list default="true" id="0a6efd11-28fc-4d23-81c6-8be11279c5fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/attendance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HululApp - Frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/_rtl.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_rtl.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_animation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_bootstrap_rtl.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_ltr.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_rtl.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Apple_Pay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Hulul Club copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/application.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/aramex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/call-to-action.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/client.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/control-panel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/feat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/feat2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/feat3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/fishmarket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hero-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pay-delivery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/paypal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/product.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/tard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/what-are-you-waiting-for.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/why-us-rocket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,18 +58,10 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1nKtEZFARkPhAlGqdpU4tiI3oD8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1nfXbd4TrOFMnSh414aKrxvEaGh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,30 +74,22 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-    <property name="ts.external.directory.path" value="E:\installed programms\JetBrains\PhpStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Hulul Tech\HululApp\HululApp-frontend" />
+      <recent name="D:\ITI\HTML5\project\Attendance-Project" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="208f729a-e1f0-4015-b6bd-bea8ba48f76b" name="Default Changelist" comment="" />
-      <created>1611150514329</created>
+      <changelist id="0a6efd11-28fc-4d23-81c6-8be11279c5fe" name="Default Changelist" comment="" />
+      <created>1611782198201</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1611150514329</updated>
-      <workItem from="1611150530080" duration="151000" />
-      <workItem from="1611150726337" duration="9144000" />
-      <workItem from="1611175374314" duration="659000" />
-      <workItem from="1611231659003" duration="18299000" />
-      <workItem from="1611330500194" duration="18515000" />
-      <workItem from="1611429588078" duration="2685000" />
-      <workItem from="1611527063955" duration="9828000" />
-      <workItem from="1611605441436" duration="6235000" />
+      <updated>1611782198201</updated>
+      <workItem from="1611782204612" duration="7676000" />
     </task>
     <servers />
   </component>
