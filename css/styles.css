@@ -11140,12 +11140,12 @@ h3 {
   right: 0;
 }
 
-#logout {
+#floating-buttons {
   position: absolute;
   top: 30px;
   right: 30px;
 }
-#logout .btn {
+#floating-buttons .btn {
   border-radius: 50%;
   width: 40px;
   height: 40px;

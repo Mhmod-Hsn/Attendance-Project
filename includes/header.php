@@ -11,23 +11,8 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
 		<link rel="stylesheet" href="./css/styles.css">
-		<link rel="icon" href="./images/logo.png" type="image/ico">
+		<link rel="icon" href="./favicon.ico" type="image/ico">
 
-
-
-		<!-- Jquery -->
-		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-
-		<!-- Popper + Bootstrap -->
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-
-		<!-- Sweet alert 2 -->
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-
-
-		<script src="../js/script.js"></script>
 
 
 	</head>
@@ -39,13 +24,21 @@
 				<div class="inner three"></div>
 			</div>
 		</div>
-		<div id="logout">
-			<button  type="button" class="btn btn-primary shadow"
+
+		<div id="floating-buttons" class="d-flex flex-column">
+			<button id="logout" type="button" class="btn btn-primary mb-2 shadow"
 			         data-toggle="tooltip" title="Logout" data-placement="left"
 			         onclick="logout()"
 			>
 				<i class="fas fa-sign-in-alt"></i>
 			</button>
+			<button id="saveUsers" type="button" class="btn btn-warning mb-2 shadow"
+			         data-toggle="tooltip" title="Save Users" data-placement="left"
+			         onclick="SaveAsFile(localStorage.getItem('users'),'users.json')"
+			>
+				<i class="fas fa-save text-white"></i>
+			</button>
+
 		</div>
 
 		<div class="container">

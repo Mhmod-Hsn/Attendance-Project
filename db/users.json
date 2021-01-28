@@ -1,17 +1,1 @@
-[
-    {
-        "username": "hsn",
-        "password": "123",
-        "role": "admin"
-    },
-    {
-        "username": "emp1",
-        "password": "123",
-        "role": "employee"
-    },
-    {
-        "username": "emp2",
-        "password": "123",
-        "role": "employee"
-    }
-]
+[{"username":"hsn","password":"123","firstname":"Mahmoud","lastname":"Hassan","address":"address here","email":"hsn@mail.com","age":"24","role":"admin","attend":[],"late":[],"absent":[],"lastAttendance":null},{"username":"emp1","password":"123","role":"employee","attend":[],"late":[],"absent":["1/27/2021, 9:50:23 PM"],"lastAttendance":null},{"username":"emp2","password":"123","role":"employee","attend":[],"late":[],"absent":["1/22/2021, 9:38:16 PM","1/26/2021, 9:38:16 PM","1/28/2021, 9:38:16 PM"],"lastAttendance":null},{"username":"hsn2","password":"123","role":"employee","firstname":"Mahmoud","lastname":"Hassan","address":"address here","email":"hsn@mail.com","age":"20","attend":[],"late":[],"absent":[],"lastAttendance":null}]

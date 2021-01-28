@@ -39,8 +39,6 @@
 
 
 <script>
-	let form = document.querySelector('#login-form')
-
 	window.addEventListener('load', function() {
 		// check login state
         redirectLoggedInUser()
@@ -51,7 +49,7 @@
 
 
 
-    form.addEventListener('submit', function(event) {
+    document.querySelector('#login-form').addEventListener('submit', function(event) {
 
         let username = document.querySelector('#username').value,
             password = document.querySelector('#password').value
@@ -67,8 +65,8 @@
             ) {
                 found=true
                 // save in localstorage
+                user = users[i];
                 localStorage.setItem('user',JSON.stringify(users[i]));
-                saveUserInfo(users[i]);
 
                 redirectLoggedInUser()
             }
@@ -81,8 +79,6 @@
             })
         }
     });
-
-
 </script>
 
 <?php include('includes/footer.php') ?>

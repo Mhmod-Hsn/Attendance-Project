@@ -6,15 +6,15 @@
 
 <form id="attendance-form" class="needs-validation " novalidate>
 	<div class="form-group">
-<!--		-->
+		<label for="employees">Employees</label>
 		<select
-			class="form-control " multiple
+			class="form-control h-100"
 			id="employees"
+			multiple
+			size="10"
 			required
+
 		>
-			<option  disabled value="">Choose Username</option>
-
-
 		</select>
 		<div class="invalid-feedback">
 			Please select username.
@@ -22,8 +22,8 @@
 	</div>
 
 
-	<div class="form-group">
-
+	<!--<div class="form-group">
+		<label for="attendance-time">Attendance Time</label>
 		<div class="input-group mb-3">
 			<input
 				placeholder="attendance time"
@@ -40,12 +40,10 @@
 			</div>
 		</div>
 
-
-
 		<div class="invalid-feedback">
 			Please choose attendance time.
 		</div>
-	</div>
+	</div>-->
 	<button class="btn btn-primary btn-block" type="submit">Confirm Attendance</button>
 </form>
 
@@ -53,26 +51,24 @@
 
 <script>
     window.addEventListener('load',function (){
-        fillAttendanceDateTime(false)
-
         checkAuthAdmin()
     })
 
+	let form = document.querySelector('#attendance-form')
+    form.addEventListener('submit', function(event) {
+        if (form.checkValidity()){
+            event.preventDefault();
 
-	function fillAttendanceDateTime(fireToast = true){
-        $('#attendance-time').val(new Date().toLocaleTimeString('en-EG',{ hour12: false }))
-		if (fireToast)
-            toast.fire('Time updated successfully')
-    }
+			let attendance = $('#employees').val()
 
-     function fillUsersToSelect(){
-        let emps =  users.filter(emp => emp.role === 'employee')
+	        attendance.forEach(person=>{
+                registerAttendance(person,new Date().toLocaleString())
+	        })
+        }
+    });
 
 
-	     emps.forEach(emp=>{
-             $('select#employees').append(new Option(emp.username, emp.username));
-	     })
-    }
+
 
 </script>
 
