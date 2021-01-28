@@ -144,7 +144,8 @@
                 icon: 'error'
             })
         } else {
-            appendUserData(userData);
+            users.push(userData)
+            setUsers()
         }
     });
 

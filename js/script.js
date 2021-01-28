@@ -2,6 +2,9 @@
 const maxLateTime = '9:30:00 AM'
 const dayStartime = '9:00:00 AM'
 users = []
+monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
 
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -55,8 +58,23 @@ window.addEventListener('load', function() {
 
     // get current user if logged in
     getCurrentUserInfo()
+
+    setInterval(updateData,2000)
 });
 
+// this function is for testing purposes >>ONLY<<
+function updateData(){
+    getUsers()
+    if (users && user ){
+        for (let i=0;i<users.length;i++){
+            if (user.username === users[i].username){
+                user = users[i]
+                asyncLocalStorage.setItem('user',JSON.stringify(user))
+                break
+            }
+        }
+    }
+}
 
 function getCurrentUserInfo(){
     if (localStorage.getItem('user')){
@@ -89,7 +107,7 @@ function redirectLoggedInUser(){
         if (user.role === 'admin'){
             window.location.replace("/attendance.php");
         } else {
-            window.location.replace("/emp.php");
+            window.location.replace("/profile.php");
         }
     }
 }
@@ -128,21 +146,20 @@ function fillUsersToSelect(){
 function setUsers (){
     asyncLocalStorage.setItem('users',JSON.stringify(users))
         .then(res=>{
-            toast.fire('successfully saved')
+            // toast.fire('successfully saved')
         })
 }
 function getUsers () {
 
-    // users = JSON.parse(localStorage.getItem('users'))
 
-    asyncLocalStorage.getItem('users')
+/*    asyncLocalStorage.getItem('users')
         .then(res=>{
             users = JSON.parse(res)
             fillUsersToSelect()
-        })
+        })*/
 
 
-    /*fetch('db/users.json')
+    fetch('db/users.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error("HTTP error " + response.status);
@@ -151,15 +168,11 @@ function getUsers () {
         })
         .then(json => {
             users = json;
-            saveUserData()
+            setUsers()
         })
         .then(()=>{
             fillUsersToSelect()
-        })*/
-}
-
-function appendUserData(userData) {
-    users.push(userData)
+        })
 }
 
 function SaveAsFile(content, fileName, contentType='application/json;charset=utf-8') {
