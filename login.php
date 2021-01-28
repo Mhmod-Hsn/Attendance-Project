@@ -11,6 +11,7 @@
 			type="text"
 			class="form-control"
 			id="username"
+			value="hsn"
 			required>
 		<div class="invalid-feedback">
 			Please provide username.
@@ -22,6 +23,7 @@
 			type="password"
 			class="form-control"
 			id="password"
+			value="123"
 			required>
 		<div class="invalid-feedback">
 			Please provide password.
@@ -35,6 +37,53 @@
 	<p class="mt-3 mb-2 text-capitalize">don't have an account? <a href="register.php">register</a> now!</p>
 </form>
 
+
+<script>
+	let form = document.querySelector('#login-form')
+
+	window.addEventListener('load', function() {
+		// check login state
+        redirectLoggedInUser()
+
+		removeLogoutBtn()
+    })
+
+
+
+
+    form.addEventListener('submit', function(event) {
+
+        let username = document.querySelector('#username').value,
+            password = document.querySelector('#password').value
+
+        event.preventDefault();
+
+        let found = false;
+        for (let i=0;i<users.length;i++){
+            if (
+                username === users[i].username
+                &&
+                password === users[i].password
+            ) {
+                found=true
+                // save in localstorage
+                localStorage.setItem('user',JSON.stringify(users[i]));
+                saveUserInfo(users[i]);
+
+                redirectLoggedInUser()
+            }
+        }
+
+        if(!found){
+            toast.fire({
+                text: 'wrong username or password, try again!',
+                icon: 'error'
+            })
+        }
+    });
+
+
+</script>
 
 <?php include('includes/footer.php') ?>
 

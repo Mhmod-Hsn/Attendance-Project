@@ -6,12 +6,15 @@
 
 <form id="attendance-form" class="needs-validation " novalidate>
 	<div class="form-group">
+<!--		-->
 		<select
-			class="custom-select"
-			id="username"
+			class="form-control " multiple
+			id="employees"
 			required
 		>
-			<option selected disabled value="">Choose Username</option>
+			<option  disabled value="">Choose Username</option>
+
+
 		</select>
 		<div class="invalid-feedback">
 			Please select username.
@@ -49,9 +52,10 @@
 
 
 <script>
-
     window.addEventListener('load',function (){
         fillAttendanceDateTime(false)
+
+        checkAuthAdmin()
     })
 
 
@@ -59,6 +63,15 @@
         $('#attendance-time').val(new Date().toLocaleTimeString('en-EG',{ hour12: false }))
 		if (fireToast)
             toast.fire('Time updated successfully')
+    }
+
+     function fillUsersToSelect(){
+        let emps =  users.filter(emp => emp.role === 'employee')
+
+
+	     emps.forEach(emp=>{
+             $('select#employees').append(new Option(emp.username, emp.username));
+	     })
     }
 
 </script>

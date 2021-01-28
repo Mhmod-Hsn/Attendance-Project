@@ -25,6 +25,8 @@
 		<!-- Sweet alert 2 -->
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+
+
 		<script src="../js/script.js"></script>
 
 
@@ -37,12 +39,19 @@
 				<div class="inner three"></div>
 			</div>
 		</div>
-
+		<div id="logout">
+			<button  type="button" class="btn btn-primary shadow"
+			         data-toggle="tooltip" title="Logout" data-placement="left"
+			         onclick="logout()"
+			>
+				<i class="fas fa-sign-in-alt"></i>
+			</button>
+		</div>
 
 		<div class="container">
 
 			<!-- Main Wrapper start -->
 			<div id="wrapper" class="d-flex align-items-center justify-content-center py-5">
-				<div class="card border-primary">
+				<div class="card border-primary shadow">
 					<div class="card-body">
 
