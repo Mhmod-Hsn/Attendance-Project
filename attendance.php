@@ -62,7 +62,7 @@
 			let attendance = $('#employees').val()
 
 	        attendance.forEach(person=>{
-                registerAttendance(person,new Date().toLocaleString())
+                registerAttendance(person,new Date())
 	        })
         }
     });

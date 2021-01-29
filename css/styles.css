@@ -11167,7 +11167,12 @@ label,
 #register-form,
 #attendance-form,
 #login-form {
-  width: 350px;
+  min-width: 350px;
+}
+
+div#dashboard {
+  min-width: 800px;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -68,7 +68,9 @@
         "address": "address here",
         "email": "hsn@mail.com",
         "age": "20",
-        "attend": [],
+        "attend": [
+            "1/29/2021, 7:27:43 AM"
+        ],
         "late": [],
         "absent": [],
         "lastAttendance": null

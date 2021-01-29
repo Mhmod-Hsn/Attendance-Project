@@ -16,11 +16,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
 
-		<!-- SAVE FILES -->
-<!--		<script src="../vendors/file-saver/filesaver.min.js"></script>-->
+		<!-- Chart Js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
 
-
-					<!-- Sweet alert 2 -->
+		<!-- Sweet alert 2 -->
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 

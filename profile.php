@@ -3,6 +3,20 @@
 
 
 <div id="profile" style="min-width: 600px">
+
+	<div class="form-group admin-only">
+		<label for="employees">Select Employee To show attendance information</label>
+		<select
+			class="form-control"
+			id="allEmployees"
+			required
+			onchange="ShowUserStatistics(this)"
+		>
+		</select>
+	</div>
+
+
+
 	<div class="text-center">
 		<i class="fas fa-user-circle text-primary h3 font-weight-bold"></i>
 		<h3 id="username" class=" d-inline-block font-weight-bolder text-primary text-uppercase mb-3">
@@ -87,77 +101,17 @@
 
 <script >
     window.addEventListener('load', function() {
+
         setTimeout(()=>{
+			if (user.role === 'employee'){
+	            ShowUserStatistics(user)
+            } else {
+                fillAllUsersToSelect()
+			}
 
-            document.querySelector('#profile #username').innerHTML = `${user.firstname} ${user.lastname} (${user.username})`
-
-
-
-
-            /* Get current Month only Attendance */
-
-	        let attend = user.attend.filter(once=>{
-                            return new Date(once).getMonth() === new Date().getMonth()
-                        }),
-                absent =  user.absent.filter(once=>{
-		                    return new Date(once).getMonth() === new Date().getMonth()
-		                }),
-                late = user.late.filter(once=>{
-		                    return new Date(once).getMonth() === new Date().getMonth()
-		                })
+        },1000)
 
 
-	        /* Monthly Attendance */
-
-            document.querySelector('#monthly-table .attend').innerText  = attend.length
-            document.querySelector('#monthly-table .late').innerText    = late.length
-            document.querySelector('#monthly-table .absent').innerText  = absent.length
-            document.querySelector('#monthly-table .month-name').innerText  = monthNames[new Date().getMonth()]
-
-
-
-
-	        /* Daily Attendance */
-			let allDays = []
-
-            attend.forEach(item=>{
-                allDays.push({data: item,type: 'attend'})
-                // document.querySelector('#daily-table .attend').innerHTML  += (item + '<br/>')
-	        })
-	        late.forEach(item=>{
-                allDays.push({data: item,type: 'late'})
-                // document.querySelector('#daily-table .late').innerHTML  += (item + '<br/>')
-	        })
-	        absent.forEach(item=>{
-                allDays.push({data: item,type: 'absent'})
-                // document.querySelector('#daily-table .absent').innerHTML  += (item + '<br/>')
-	        })
-
-	        allDays.sort((a,b)=> {
-                return new Date(a.data).getTime() > new Date(b.data).getTime() ? 1 : -1
-	        })
-            allDays.forEach(singleDay=>{
-                let bgClass;
-                switch (singleDay.type){
-                    case 'attend':
-	                    bgClass = 'bg-success';
-                        break;
-                    case 'late':
-                        bgClass = 'bg-warning';
-                        break;
-                    default:
-	                    bgClass = 'bg-danger';
-                        break;
-                }
-                $('#daily-table').append(`<tr><th scope="row" class="font-weight-bolder ${bgClass}">${new Date(singleDay.data).toDateString()}</th><th scope="row" class="font-weight-bolder ${bgClass}">${new Date(singleDay.data).toLocaleTimeString()}</th></tr>`)
-            })
-
-
-
-            document.querySelector('#daily-table .month-name').innerText  = monthNames[new Date().getMonth()]
-
-
-        },1)
 
     })
 </script>
