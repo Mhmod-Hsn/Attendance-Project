@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+            "username": "hsn",
+            "password": "123",
+            "firstname": "Mahmoud",
+            "lastname": "Hassan",
+            "address": "address here",
+            "email": "hsn@mail.com",
+            "age": "24",
+            "role": "admin",
+            "attend": [],
+            "late": [],
+            "absent": []
+        }
+    ]
+
+}

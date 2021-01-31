@@ -5,7 +5,7 @@
 <h4 class="text-center font-weight-bold text-primary text-uppercase mb-3">Register</h4>
 
 <form id="register-form" class="needs-validation " novalidate>
-	<div class="form-group">
+	<!--<div class="form-group">
 		<input
 			placeholder="username"
 			type="text"
@@ -28,7 +28,7 @@
 		<div class="invalid-feedback">
 			Please provide password.
 		</div>
-	</div>
+	</div>-->
 	<div class="form-group">
 		<input
 			placeholder="firstname"
@@ -104,12 +104,18 @@
 </form>
 
 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
 <script>
     window.addEventListener('load', function() {
+        // SecureToken : "36e3c2ee-5a27-4fb8-8c0c-9cf37ec819d8",
+
         // check login state
         redirectLoggedInUser()
 
         removeLogoutBtn()
+
     })
 
 
@@ -118,35 +124,30 @@
     document.querySelector('#register-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        let userData = {}
-		userData.username = document.querySelector('#username').value,
-		userData.password = document.querySelector('#password').value
-		userData.firstname = document.querySelector('#firstname').value
-		userData.lastname = document.querySelector('#lastname').value
-		userData.address = document.querySelector('#address').value
-		userData.email = document.querySelector('#email').value
-		userData.age = document.querySelector('#age').value
+        let userData = {
+		    username: generateUsername(),
+		    password: generatePassword(),
+		    firstname: document.querySelector('#firstname').value,
+		    lastname: document.querySelector('#lastname').value,
+		    address: document.querySelector('#address').value,
+		    email: document.querySelector('#email').value,
+		    age: document.querySelector('#age').value
+        }
+
+        console.log(userData)
+
+        sendEmail(userData.email,userData.username,userData.password).then(msg=>{
+            if (msg === 'OK'){
+                toast.fire({
+                    text: `Created Successfully, review your email ${userData.email} for credentials`,
+                })
 
 
-        let found = false;
-
-        for (let i=0;i<users.length;i++){
-            if (
-                userData.username === users[i].username
-            ) {
-                found=true
+                // users.push(userData)
+                setUsers()
             }
-        }
+        })
 
-        if(found){
-            toast.fire({
-                text: 'username is already exists, try again!',
-                icon: 'error'
-            })
-        } else {
-            users.push(userData)
-            setUsers()
-        }
     });
 
 

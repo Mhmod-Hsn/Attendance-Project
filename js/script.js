@@ -255,6 +255,8 @@ function registerAttendance(username,attendanceTime){
                 users[i].absent.push(attendanceTime.toLocaleString())
             }
 
+            toast.fire({text: 'Registered successfully'})
+
             $("#employees option[value=" + username + "]").hide();
 
         }
@@ -427,4 +429,29 @@ function showDashboardStatistics(){
     document.querySelector('.month-name').innerText  = monthNames[new Date().getMonth()]
 
 
+}
+
+
+function sendEmail(to,username,password) {
+    return Email.send({
+        Host : "smtp.gmail.com",
+        Username: 'da7doom@gmail.com',
+        Password: 'gxvllqvdzjetejwg',
+        To : to,
+        From : "da7doom@gmail.com",
+        Subject : `username & password confirmation`,
+        Body : `Username ${username} <br/> Password ${password}`
+    })
+}
+function generatePassword() {
+    var length = 8,
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+}
+function generateUsername() {
+    return new Date().getTime().toString();
 }
