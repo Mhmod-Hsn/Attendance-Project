@@ -55,13 +55,13 @@
 		</div>
 
 		<div id="floating-buttons" class="d-flex flex-column">
-			<button id="dashboard" type="button" class="btn btn-primary mb-2 shadow"
+			<button id="dashboard" type="button" class="btn btn-primary mb-2 shadow admin-only"
 			         data-toggle="tooltip" title="Dashboard" data-placement="left"
 			         onclick="window.location.replace('/')"
 			>
 				<i class="fas fa-tachometer-alt"></i>
 			</button>
-			<button id="attendance" type="button" class="btn btn-warning text-white mb-2 shadow"
+			<button id="attendance" type="button" class="btn btn-warning text-white mb-2 shadow admin-only"
 			        data-toggle="tooltip" title="Attendance" data-placement="left"
 			        onclick="window.location.replace('/attendance.html')"
 			>
@@ -69,7 +69,7 @@
 			</button>
 			<button id="profiles" type="button" class="btn btn-secondary mb-2 shadow"
 			         data-toggle="tooltip" title="Profiles" data-placement="left"
-			         onclick="window.location.replace('/profile.php')"
+			         onclick="window.location.replace('/profile.html')"
 			>
 				<i class="fas fa-user"></i>
 			</button>

@@ -123,7 +123,7 @@ function redirectLoggedInUser(){
         if (user.role === 'admin'){
             window.location.replace("/attendance.html");
         } else {
-            window.location.replace("/profile.php");
+            window.location.replace("/profile.html");
         }
     }
 }
@@ -168,7 +168,7 @@ function fillUsersToSelect(users){
     })
 }
 
-function fillAllUsersToSelect(){
+function fillAllUsersToSelect(users){
     let allEmployees =  []
 
 
@@ -279,10 +279,6 @@ function ShowUserStatistics(user){
     // clear table
     $('#daily-table tbody tr').remove()
 
-    user = users.find(item=>{
-        return item.username === user.value
-    })
-
     document.querySelector('#profile #username').innerHTML = `${user.firstname} ${user.lastname} (${user.username})`
 
 
@@ -350,7 +346,7 @@ function ShowUserStatistics(user){
 
 
 
-function showDashboardStatistics(){
+function showDashboardStatistics(users){
 
 
 
