@@ -95,7 +95,6 @@
 							class="form-control"
 							id="allEmployees"
 							required
-							onchange="ShowUserStatistics(this)"
 						>
 						</select>
 					</div>
@@ -190,13 +189,10 @@
                         asyncLocalStorage.getItem('user')
                             .then(data => {
                                 user = JSON.parse(data)
-                                console.log(user)
                                 if (user.role === 'employee') {
-
                                     // is employee
                                     ShowUserStatistics(user)
                                 } else {
-
                                     // is admin
                                     fetch(`${API_BASE_URL}/users?role=employee`)
                                         .then(response => response.json())
@@ -207,6 +203,15 @@
 
                             })
 
+                    })
+                    
+                    document.getElementById('allEmployees').addEventListener('change', function (event) {
+
+                        fetch(`${API_BASE_URL}/users?id=${event.target.value}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                ShowUserStatistics(data[0])
+                            })
                     })
 				</script>
 

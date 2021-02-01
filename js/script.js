@@ -181,7 +181,7 @@ function fillAllUsersToSelect(users){
     }
 
     allEmployees.forEach(emp=>{
-        $('select#allEmployees').append(new Option(emp.username, emp.username));
+        $('select#allEmployees').append(new Option(`${emp.firstname} ${emp.lastname}`, emp.id));
     })
 }
 
@@ -280,7 +280,6 @@ function ShowUserStatistics(user){
     $('#daily-table tbody tr').remove()
 
     document.querySelector('#profile #username').innerHTML = `${user.firstname} ${user.lastname} (${user.username})`
-
 
     /* Get current Month only Attendance */
 
