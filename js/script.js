@@ -1,11 +1,20 @@
+const API_BASE_URL = 'http://localhost:3000'
+const fetchOptions = {
+    headers: {
+        'Content-Type': 'application/json',
+    }
+}
+
+
 const Opentime = '07:00:00 AM'
 const maxLateTime = '09:30:00 AM'
 const dayStartime = '09:00:00 AM'
-users = []
 monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
 ];
 
+users = []
+user = null
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 window.addEventListener('load', function() {
@@ -50,7 +59,10 @@ window.addEventListener('load', function() {
     });
 
 
-
+    // remove floating buttons
+    if($('#register-form,#login-form').length){
+        $('#floating-buttons').remove()
+    }
 
 
     //get users
@@ -62,7 +74,7 @@ window.addEventListener('load', function() {
     // setInterval(updateData,2000)
 
 
-    if (user.role !== 'admin'){
+    if (user?.role !== 'admin'){
         $('.admin-only').remove()
     }
 
@@ -90,7 +102,7 @@ function getCurrentUserInfo(){
 
 function logout(){
     localStorage.removeItem('user')
-    window.location.replace("/login.php");
+    window.location.replace("/login.html");
 }
 
 function removeLogoutBtn(){
@@ -98,10 +110,8 @@ function removeLogoutBtn(){
 }
 
 function checkAuthAdmin(){
-    let user = JSON.parse(localStorage.getItem('user'));
-
     if (!user && user.role==='admin'){
-        window.location.replace("/login.php");
+        window.location.replace("/login.html");
     }
 }
 
@@ -111,7 +121,7 @@ function redirectLoggedInUser(){
     // already logged in
     if (user){
         if (user.role === 'admin'){
-            window.location.replace("/attendance.php");
+            window.location.replace("/attendance.html");
         } else {
             window.location.replace("/profile.php");
         }
@@ -127,18 +137,26 @@ function fillAttendanceDateTime(fireToast = true){
 }
 */
 
-function fillUsersToSelect(){
+function fillUsersToSelect(users){
     let emps =  []
 
     for (let i=0;i<users.length;i++){
         // hide admins and prople who was already registered today
         if (
             users[i].role !== 'admin' &&
-            !(
+            (
                 // check if it was registered today or not
-                new Date(users[i].absent[users[i].absent.length-1]).toLocaleDateString() === new Date().toLocaleDateString() ||
-                new Date(users[i].late[users[i].late.length-1]).toLocaleDateString() === new Date().toLocaleDateString() ||
-                new Date(users[i].attend[users[i].attend.length-1]).toLocaleDateString() === new Date().toLocaleDateString()
+                new Date(users[i].absent[users[i].absent.length-1]).toLocaleDateString()
+                    !==
+                new Date().toLocaleDateString() &&
+
+                new Date(users[i].late[users[i].late.length-1]).toLocaleDateString()
+                    !==
+                new Date().toLocaleDateString() &&
+
+                new Date(users[i].attend[users[i].attend.length-1]).toLocaleDateString()
+                    !==
+                new Date().toLocaleDateString()
             )
         ){
             emps.push(users[i])
@@ -146,7 +164,7 @@ function fillUsersToSelect(){
     }
 
     emps.forEach(emp=>{
-        $('select#employees').append(new Option(emp.username, emp.username));
+        $('select#employees').append(new Option(`${emp.firstname} ${emp.lastname}`, emp.id));
     })
 }
 
@@ -166,103 +184,80 @@ function fillAllUsersToSelect(){
         $('select#allEmployees').append(new Option(emp.username, emp.username));
     })
 }
-function setUsers (){
-    asyncLocalStorage.setItem('users',JSON.stringify(users))
-}
+
 function getUsers () {
-
-
-    asyncLocalStorage.getItem('users')
-        .then(res=>{
-            users = JSON.parse(res)
-            fillUsersToSelect()
+    fetch(`${API_BASE_URL}/users`)
+        .then(response => response.json())
+        .then(data => {
+            users = data
         })
-
-/*
-    fetch('db/users.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("HTTP error " + response.status);
-            }
-            return response.json();
-        })
-        .then(json => {
-            users = json;
-            setUsers()
-        })
-        .then(()=>{
-            fillUsersToSelect()
-        })*/
+        .catch(error => toast.fire({text: error,icon: 'error'}))
 }
 
-function SaveAsFile(content, fileName, contentType='application/json;charset=utf-8') {
-
-    let a = document.createElement("a");
-    let file = new Blob([content], {type: contentType});
-    a.href = URL.createObjectURL(file);
-    a.download = fileName;
-    a.click();
-
-/*
-    saveAs('user.json', data, (err) => {
-        if (err) {
-            throw err;
-        }
-        console.log("JSON data is saved.");
-    });
-*/
-
+function getUser (id) {
+    return fetch(`${API_BASE_URL}/users/${id}`)
+        .then(response => response.json())
+        .then(data => {
+            return data
+        })
+}
+function editUser (id,data) {
+    fetch(`${API_BASE_URL}/users/${id}`, {
+        ...fetchOptions,
+        method: 'PUT', // or 'PUT'
+        body: JSON.stringify(data)
+    }).then(response => {
+        return response
+    })
 }
 
+function registerAttendance(id,attendanceTime){
 
-function registerAttendance(username,attendanceTime){
-    for (let i=0;i<users.length;i++){
-        if (username === users[i].username){
-            console.log(attendanceTime)
-            console.log(new Date(attendanceTime).toLocaleTimeString())
+    getUser(id)
+        .then(data=>{
+            let tempUser = data;
+            let currentTime = new Date(attendanceTime).toLocaleTimeString()
 
             //wrong time
             if (
-                new Date(attendanceTime).toLocaleTimeString() <= Opentime
+                currentTime <= Opentime
                 &&
-                new Date(attendanceTime).toLocaleTimeString() >= '00:00:00 AM'
+                currentTime >= '00:00:00 AM'
             ){
                 toast.fire({text: 'Wrong Time',icon: 'error'})
-                break
             }
 
 
             //attend
             else if (
-                new Date(attendanceTime).toLocaleTimeString() <= dayStartime
-            &&
-                new Date(attendanceTime).toLocaleTimeString() >= Opentime
+                currentTime <= dayStartime
+                &&
+                currentTime >= Opentime
             ){
-                users[i].attend.push(attendanceTime.toLocaleString())
+                tempUser.attend.push(attendanceTime.toLocaleString())
+                toast.fire({text: `${tempUser.firstname} ${tempUser.lastname} attended at ${currentTime}`})
             }
 
             //late
             else if (
-                new Date(attendanceTime).toLocaleTimeString() <= maxLateTime
+                currentTime <= maxLateTime
                 &&
-                new Date(attendanceTime).toLocaleTimeString() > dayStartime
+                currentTime > dayStartime
             ){
-                users[i].late.push(attendanceTime.toLocaleString())
+                tempUser.late.push(attendanceTime.toLocaleString())
+                toast.fire({text: `${tempUser.firstname} ${tempUser.lastname} attended (late) at ${currentTime}`})
             }
 
             //absence
             else {
-                users[i].absent.push(attendanceTime.toLocaleString())
+                tempUser.absent.push(attendanceTime.toLocaleString())
+                toast.fire({text: `${tempUser.firstname} ${tempUser.lastname} absent at ${currentTime}`})
             }
 
-            toast.fire({text: 'Registered successfully'})
+            $("#employees option[value=" + id + "]").hide();
 
-            $("#employees option[value=" + username + "]").hide();
-
-        }
-    }
-
-    setUsers()
+            editUser(tempUser.id,tempUser)
+        })
 }
 
 const asyncLocalStorage = {
